@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {% include head_meta.html %}
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header>
+      {% include term-nav.html %}
+      {% include term-prompt.html pwd=page.pwd cmd=page.cmd %}
+  </header>
+  <div class="hack container">
+    {{content}}
+  </div>
+</body>
+</html>

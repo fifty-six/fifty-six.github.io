@@ -1,0 +1,60 @@
+# Permalinks
+permalink: "/:title.html"
+
+# Setup
+title:            site
+url:              https://fiftysix.dev
+baseurl:          /
+author: &default-author
+  name:           Yusuf Bham
+  url:            https://fiftysix.dev
+  email:          fiftysix@fiftysix.dev
+
+encoding: utf-8
+
+exclude:
+  - ".git"
+  - "*.nix"
+  - "*.lock"
+  - ".bundle"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: killercup/jekyll-theme-scribbles
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..4
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+# Navigation
+nav:
+  - name:           "code"
+    href:           "https://github.com/fifty-six"
+    kind:           "dir"
+  - name:           "about.md"
+    href:           "/"
+    kind:           "file"
+  - name:           "credits.md"
+    href:           "/credits"
+    kind:           "file"
+  - name:           "résumé.pdf"
+    href:           "/resume.pdf"
+    kind:           "file"
