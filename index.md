@@ -28,7 +28,7 @@ this space intentionally left blank
 
 + **[hk-modding/api][hk-api]: A modding api for Hollow Knight**  
  
-  I'm a the current maintainer of the HK modding api, and
+  I'm the current maintainer of the HK modding api, and
   a long-time contributor. The api is a mod loader using
   [MonoMod] for assembly patching and the addition
   of hooks and mod management features.
