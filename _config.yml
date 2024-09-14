@@ -58,3 +58,6 @@ nav:
   - name:           "résumé.pdf"
     href:           "/resume.pdf"
     kind:           "file"
+  - name:           "pubkey.asc"
+    kind:           "file"
+    href:           "/pubkey.asc"
