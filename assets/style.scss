@@ -12,6 +12,19 @@ $color-green: #e3ffa2;
 $color-orange: #fbc19d;
 $color-bg: rgb(2, 7, 9);
 $color-fg: rgb(249, 250, 251);
+$fonts: 
+  "Fira Mono",
+  "Fira Code",
+  Menlo,
+  Monaco,
+  "Droid Sans",
+  "Lucida Console",
+  "Liberation Mono",
+  "DejaVu Sans Mono",
+  "Bitstream Vera Sans Mono",
+  "Courier New",
+  monospace,
+  serif;
 
 hr {
   text-align: center;
@@ -26,7 +39,15 @@ body {
 	margin: 1ch auto;
 	background-color: $color-bg;
     color: $color-fg;
-    font-family: "Fira Code",Menlo,Monaco,"Droid Sans","Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace,serif;
+}
+
+// Need a bit more specificity to override the base theme
+.hack, body, .hack strong, .hack code {
+    font-family: $fonts;
+}
+
+.hack code {
+  font-weight: initial;
 }
 
 a {
@@ -40,8 +61,10 @@ a:hover {
 }
 
 .hack h1, .hack h2, .hack h3 {
-  color: $color-light-blue;// rgb(186, 230, 253);
-  font-family: "Fira Mono", "Fira Code",Menlo,Monaco,"Droid Sans","Lucida Console","Liberation Mono","DejaVu Sans Mono","Bitstream Vera Sans Mono","Courier New",monospace,serif;
+  color: $color-light-blue;
+  // In case we have Fira Code but not Fira Mono
+  font-variant-ligatures: none;
+  font-family: $fonts;
 }
 
 .hack ul > li:before {
