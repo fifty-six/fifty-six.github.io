@@ -2,7 +2,7 @@
 # based on https://litchipi.github.io/nix/2023/01/12/build-jekyll-blog-with-nix.html
 {
   description = "nix flake for Jekyll sites";
-  inputs = { nixpkgs.url = "github:nixos/nixpkgs/22.11"; };
+  inputs = { nixpkgs.url = "github:nixos/nixpkgs/24.05"; };
   outputs = inputs:
     with inputs;
     let
@@ -10,14 +10,14 @@
       pkgs = import nixpkgs { inherit system; };
 
       # Specify gems and dependencies here
-      github-pages-version = 227;
+      github-pages-version = 232;
 
       inc_gems = {
         minima = "2.5";
-        webrick = "1.7";
+        webrick = "1.9.0";
       };
 
-      inc_plugins = { jekyll-feed = "0.12"; };
+      inc_plugins = { jekyll-feed = "0.17"; };
 
       # Generation of the Gemfile
       generate_gemfile = let
