@@ -1026,10 +1026,10 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "02sdb5gqifgrkb9j9qxsa4gcp96iwyjc5ffxbx6d1fas8yixi4r0";
+      sha256 = "1wj2qgwrqc7555wcr04a7aix25bjyxxgw42yf5gk4kf6f21raw1r";
       type = "gem";
     };
-    version = "1.0.0";
+    version = "1.0.1";
   };
   webrick = {
     groups = ["default" "jekyll_plugins"];

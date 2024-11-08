@@ -73,7 +73,7 @@
           export LANG="en_US.UTF-8"
           export LANGUAGE="en_US.UTF-8"
 
-          ${env}/bin/bundler exec -- jekyll serve --trace --drafts --verbose
+          ${env}/bin/jekyll serve --trace --drafts --verbose
         '';
 
         # nix run .#generate -> Re-generate the gemfile, lockfile, build environment and gemset.nix
@@ -94,7 +94,9 @@
           bundler update
           bundler lock
           bundler package
+
           bundix --magic
+
           rm -rf vendor
         '';
       };

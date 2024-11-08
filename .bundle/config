@@ -1,3 +1,5 @@
 ---
-BUNDLE_CACHE_ALL: "true"
 BUNDLE_PATH: "vendor/bundle"
+BUNDLE_FORCE_RUBY_PLATFORM: "true"
+BUNDLE_NO_INSTALL: "true"
+BUNDLE_CACHE_ALL: "true"
