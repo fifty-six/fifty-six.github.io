@@ -65,6 +65,10 @@
         };
 
     in {
+      devShells.${system}.default = pkgs.mkShell {
+        buildInputs = [ pkgs.ruby pkgs.bundler ];
+      };
+
       apps.${system} = {
         # nix run -> serves the website locally
         default = simple_script "serve_blog" [ ] ''
