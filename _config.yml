@@ -17,6 +17,7 @@ exclude:
   - "*.nix"
   - "*.lock"
   - ".bundle"
+  - "vendor"
 
 defaults:
   -
