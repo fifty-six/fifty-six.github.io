@@ -12,6 +12,9 @@ author: &default-author
 
 encoding: utf-8
 
+include:
+  - ".well-known"
+
 exclude:
   - ".git"
   - "*.nix"
