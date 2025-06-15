@@ -90,6 +90,6 @@ this space intentionally left blank
 
 + e-mail: `fiftysix (AT) fiftysix (DOT) dev`
 + discord: `@56`
-+ matrix: `@fifty-six:matrix.org`
++ matrix: `@fifty-six:matrix.fiftysix.dev`
 
 * * *
