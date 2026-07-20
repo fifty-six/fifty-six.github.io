@@ -50,7 +50,7 @@ pwd: friends
 </table>
 
 <div>
-      {% include term-prompt.html pwd=page.pwd cmd="timg --grid 4x4 badges/*" id="badges" %}
+      {% include term-prompt.html pwd=page.pwd cmd="timg --grid badges/*" id="badges" %}
 
       {% for item in site.data.badges %}
         <a class="badge" href="{{ item.href }}" aria-label="{{ item.name }}">
