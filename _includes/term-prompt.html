@@ -23,7 +23,7 @@
         {{cmd_fmt}}{{body}}
     {% endif %}
     <span class="prompt path">
-        <a href = "/">~</a>{% if include.pwd %}<a href = "/{{include.pwd}}" class="dir">{{include.pwd}}</a>{% endif %}
+        <a href = "/">~</a>{% if include.pwd %}<a href = "/{{include.pwd}}" class="dir">/{{include.pwd}}</a>{% endif %}
     </span>
     <span class="prompt host">
         <a href="/">fiftysix.dev</a>

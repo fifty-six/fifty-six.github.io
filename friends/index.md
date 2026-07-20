@@ -2,7 +2,7 @@
 layout: dir
 title: fiftysix.dev/friends
 cmd: eza -laa
-pwd: /friends
+pwd: friends
 ---
 <!-- help me -->
 {% assign current_folder = page.path | split: '/' | pop | join: '/' %}
