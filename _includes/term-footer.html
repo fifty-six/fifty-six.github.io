@@ -1,6 +1,16 @@
 <!-- term-footer -->
 <footer class="term">
-    {% include term-prompt.html pwd=page.pwd %}
-    <span class="blinking-cursor">_</span>
+<div class="prompt">
+    <span class="prompt char" style="color: #a1d6ff;">
+        %
+    </span>
+    <span class="blinking-cursor">|</span>
+    <span class="prompt path">
+        <a href = "/">~</a>{% if include.pwd %}<a href = "/{{include.pwd}}" class="dir">{{include.pwd}}</a>{% endif %}
+    </span>
+    <span class="prompt host">
+        <a href="/">fiftysix.dev</a>
+    </span>
+</div>
 </footer>
 <!--/ term-footer -->
