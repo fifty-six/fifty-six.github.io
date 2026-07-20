@@ -53,7 +53,7 @@ pwd: /friends
       {% include term-prompt.html pwd=page.pwd cmd="timg --grid 4x4 badges/*" id="badges" %}
 
       {% for item in site.data.badges %}
-        <a class="badge" href="{{ item.url }}" aria-label="{{ item.name }}">
+        <a class="badge" href="{{ item.href }}" aria-label="{{ item.name }}">
             <img src="/friends/badges/{{ item.badge }}" width=88 height=31 />
         </a>
       {% endfor %}
