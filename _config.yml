@@ -29,6 +29,12 @@ defaults:
       type: "pages"
     values:
       layout: default
+  -
+    scope:
+      path: "friends"
+      type: "posts"
+    values:
+      layout: default
 
 plugins:
   - jekyll-remote-theme
@@ -52,6 +58,9 @@ sass:
 nav:
   - name:           "code"
     href:           "https://github.com/fifty-six"
+    kind:           "symlink-inline"
+  - name:           "friends"
+    href:           "/friends"
     kind:           "dir"
   - name:           "about.md"
     href:           "/"

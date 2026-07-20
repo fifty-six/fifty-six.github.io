@@ -9,10 +9,17 @@
 $color-light-blue: #a1d6ff;
 $color-blue: #8ecee8;
 $color-green: #e3ffa2;
-$color-orange: #fbc19d;
+$color-dark-green: #c1df7f;
+$color-orange: #f4bf75;
+$color-red: #ff646a;
+$color-light-gray: #6b7280;
+$color-6: #9afaf3;
 $color-bg: rgb(2, 7, 9);
 $color-fg: rgb(249, 250, 251);
-$fonts: 
+
+$breakpoint-wide: 80ch;
+
+$fonts:
   "Fira Mono",
   "Fira Code",
   Menlo,
@@ -35,7 +42,8 @@ hr {
 }
 
 body {
-	max-width: 82ch;
+    // 2ch so that this isn't touching the edges
+	max-width: min(82ch, calc(100% - 2ch));
 	margin: 1ch auto;
 	background-color: $color-bg;
     color: $color-fg;
@@ -121,12 +129,132 @@ nav.term-grid {
 
 a.dir {
   color: $color-blue;
+  font-weight: 600;
+}
+a.dir:hover {
+  background-color: $color-blue;
+  color: $color-bg;
 }
 
 a.file {
   color: $color-fg;
 }
+a.file:hover {
+  background-color: $color-fg;
+  color: $color-bg;
+}
 
 a.term-nav {
   border-bottom: none;
+}
+
+a.badge {
+  border-bottom: none;
+}
+
+a.badge:hover {
+  background-color: inherit;
+}
+
+a.badge:hover > img {
+  outline: $color-orange solid 1px;
+  outline-offset: 1px;
+}
+
+a.badge > img {
+  image-rendering: pixelated;
+}
+
+.l {
+  color: $color-6;
+}
+.d {
+  color: $color-blue;
+}
+.r {
+  color: $color-orange;
+}
+.w {
+  color: $color-red;
+}
+.x {
+  color: $color-dark-green;
+}
+.dash {
+  color: $color-light-gray;
+}
+
+.owner-perms {
+  font-weight: 600;
+  display: inherit;
+}
+
+.author {
+  color: $color-orange;
+  font-weight: 600;
+}
+
+.date {
+  color: $color-blue;
+}
+
+.perms {
+  display: inline-flex;
+}
+
+.blinking-cursor {
+    color: rgb(255, 255, 255);
+    animation: 1s blink step-end infinite;
+    margin-left: -0.3rem;
+}
+
+@keyframes "blink" {
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: white;
+    }
+}
+
+a.symlink,
+a.symlink-inline {
+  color: $color-6;
+}
+a.symlink:hover,
+a.symlink-inline:hover{
+  background-color: $color-6;
+  color: $color-bg;
+}
+
+@media only screen and (min-width: $breakpoint-wide) {
+  a.symlink::after {
+      content: " -> " attr(href);
+      color: $color-6;
+      overflow: hidden;
+  }
+  a.symlink:hover::after {
+    background-color: $color-6;
+    color: $color-bg;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-wide) {
+  .mobile-hidden {
+    visibility: collapse;
+    display: none;
+  }
+}
+
+table {
+  margin: 0;
+}
+
+.term,
+.term th,
+.term td {
+  border: none;
+  padding: 0 1ch 0 0;
 }
