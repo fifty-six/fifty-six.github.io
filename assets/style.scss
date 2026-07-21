@@ -248,8 +248,9 @@ a.symlink-inline:hover{
   }
 }
 
-table {
+table.term {
   margin: 0;
+  overflow-x: auto;
 }
 
 .term,
